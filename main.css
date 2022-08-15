@@ -54,6 +54,8 @@ article {
 }
 
 
+/* STYLE ORGANIZER */
+
 #main-container {
     width: clamp(70%, 780px, 70%);
 }
@@ -64,9 +66,7 @@ article {
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
     margin: 3rem auto;
-
 }
-
 
 
 .art1 {
@@ -77,11 +77,9 @@ article {
 }
 
 
-
 .art2 {
     background-color: var(--Very-dark-grayish-blue);
     color: white;
-
 }
 
 .art3 {
@@ -89,7 +87,6 @@ article {
     grid-row-start: 2;
     grid-column: 1 / 2;
     color: var(--Very-dark-grayish-blue);
-
 }
 
 .art4 {
@@ -97,7 +94,6 @@ article {
     grid-row-start: 2;
     grid-column: 2 / 4;
     color: white;
-
 }
 
 .art5 {
@@ -112,6 +108,20 @@ ul {
     line-height: 1.1;
 }
 
+.user-info {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+
+/* IMAGES */
+
+.quote {
+    position: absolute;
+    top: 15%;
+    left: 35%;
+    z-index: -10;
+}
 
 
 .avatar {
@@ -119,13 +129,10 @@ ul {
     height: 2.8rem;
     border-radius: 50%;
     margin-right: 1.3rem;
-
 }
 
-.user-info {
-    display: flex;
-    margin-bottom: 1rem;
-}
+
+/* TEXT */
 
 h2 {
     margin-bottom: 0.9rem;
@@ -151,18 +158,8 @@ p {
     line-height: 1.5;
 }
 
-.quote {
-    position: absolute;
-    top: 10%;
-    left: 35%;
-    display: inline-block;
-    z-index: -10;
 
-}
-
-
-
-
+/* MEDIA QUERIES */
 
 @media (max-width: 633px) {
     .grid-container {
@@ -172,18 +169,14 @@ p {
 
     #main-container {
         min-width: 90%;
-
-
     }
 }
 
 @media (max-width: 1100px) {
 
     .art5 {
-
         grid-row-start: 2;
         grid-column: 1 / 3;
-
     }
 
     .art3 {
@@ -197,18 +190,37 @@ p {
 
     #main-container {
         width: 90%;
-
     }
-
-    /* .quote {
-        width: 0;
-        height: 0;
-    }*/
 }
 
 @media (max-width: 830px) {
     .quote {
         width: 0;
         height: 0;
+    }
+}
+
+/* Attribution Styler */
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    margin: 5px auto;
+    z-index: -1;
+
+}
+
+@media (max-width: 1000px) {
+    .attribution {
+        position: absolute !important;
+        margin: -1px !important;
+        -webkit-clip-path: inset(50%) !important;
+        clip-path: inset(50%) !important;
+        border: 0 !important;
+        padding: 0 !important;
+        width: 1px !important;
+        height: 1px !important;
+        overflow: hidden !important;
+        white-space: nowrap !important;
     }
 }
